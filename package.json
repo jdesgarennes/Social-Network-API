@@ -1,0 +1,21 @@
+{
+  "name": "social-network-api",
+  "version": "1.0.0",
+  "description": "A backend API that uses mongodb and express",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jdesgarennes/Social-Network-API.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jdesgarennes/Social-Network-API/issues"
+  },
+  "homepage": "https://github.com/jdesgarennes/Social-Network-API#readme"
+}
