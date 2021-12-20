@@ -19,6 +19,12 @@ const thoughtSchema = new (
             required: true
         },
         reactions:{
+            posts: [
+                {
+                  type: Schema.Types.ObjectId,
+                  ref: 'reaction',
+                },
+              ],
 
         },
     },
@@ -28,12 +34,16 @@ const thoughtSchema = new (
         },
         id: false,
       }
-
-
 );
+thoughtSchema
 
-// reactionCount
+// create virtual 
+.virtual('reactionCount')
+.get(function () {
+    return this.reactions.posts.length;
+  });
 
-const Thought = ('though',thoughtSchema);
+  // initialize Thought model.
+const Thought = ('thought',thoughtSchema);
 
 module.exports = Thought;
