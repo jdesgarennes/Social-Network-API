@@ -1,7 +1,7 @@
 const { Schema, model } = require('mongoose');
 
 
-const thoughtSchema = new (
+const thoughtSchema = new Schema(
 
     {
         thoughtText: {
@@ -43,7 +43,37 @@ thoughtSchema
     return this.reactions.posts.length;
   });
 
-  // initialize Thought model.
-const Thought = ('thought',thoughtSchema);
 
+  const reactionSchema = new Schema(
+
+    {
+      reactionId:{
+        type: Schema.Types.ObjectId,
+        //default: Thought.id
+      },
+      reactionBody:{
+        type: String,
+        required: true,
+        maxLength: 280
+      },
+      username:{
+        type: String,
+        required: true,
+      },
+      createdAt:{
+        type:Date,
+        default: Date.now,
+      }
+    }
+
+
+
+
+  )
+
+
+
+
+  // initialize Thought model.
+const Thought = model('thought',thoughtSchema);
 module.exports = Thought;

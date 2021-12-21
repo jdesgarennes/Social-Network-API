@@ -9,6 +9,7 @@ const {
 // /api/users
 router.route('/').get(getUsers).post(createUser);
 
+// api/users/     
 router.route('/').get(getUsers).delete(deleteUser);
 
 // /api/users/:userId
