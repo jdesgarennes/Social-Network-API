@@ -24,5 +24,12 @@ module.exports = {
         .then((dbUserData) => res.json(dbUserData))
         .catch((err) => res.status(500).json(err));
     },
+    //delete a user
+    deleteUser(req, res) {
+      User.deleteOne(req.body)
+        .then((dbUserData) => res.json(dbUserData))
+        .catch((err) => res.status(500).json(err));
+    },
+
   };
   
