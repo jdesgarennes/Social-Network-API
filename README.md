@@ -14,6 +14,8 @@
   ## Github username: jdesgarennes
 
   ## Github URL: https://github.com/jdesgarennes/Social-Network-API
+
+  ## VIDEO URL: https://watch.screencastify.com/v/bFscOKm46Drx9FJd76GS
   ## License type: MIT
 
 
