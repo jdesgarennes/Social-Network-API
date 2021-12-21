@@ -76,4 +76,6 @@ thoughtSchema
 
   // initialize Thought model.
 const Thought = model('thought',thoughtSchema);
+const Reaction = model('reaction',reactionSchema);
+module.exports =Reaction;
 module.exports = Thought;

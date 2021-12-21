@@ -1,4 +1,5 @@
 const Thought = require('../models/Thought');
+const Reaction = require('../models/Thought');
 
 
 
@@ -25,11 +26,27 @@ module.exports = {
         .then((dbUserData) => res.json(dbUserData))
         .catch((err) => res.status(500).json(err));
     },
-
+  
+    // delete a thought
     deleteThought(req, res) {
         Thought.deleteOne(req.body)
           .then((dbUserData) => res.json(dbUserData))
           .catch((err) => res.status(500).json(err));
       },
+
+
+      // create a new reaction
+    createReactions(req, res) {
+      Reaction.create(req.body)
+        .then((dbUserData) => res.json(dbUserData))
+        .catch((err) => res.status(500).json(err));
+    },
+    // delete a reaction
+    deleteReaction(req, res) {
+        Reaction.deleteOne(req.body)
+          .then((dbUserData) => res.json(dbUserData))
+          .catch((err) => res.status(500).json(err));
+      },
+
   };
   
